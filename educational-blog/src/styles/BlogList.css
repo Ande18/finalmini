@@ -1,31 +1,56 @@
 .blog-list-container {
-  padding: 1rem;
+  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .blog-list-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.blog-list-header:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #4a90e2, #5ca9fb);
+  border-radius: 2px;
 }
 
 .blog-list-header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
 }
 
 .blog-list-header p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #666;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .blog-filter-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.2rem;
+  background-color: #f4f7fc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.03);
 }
 
 .search-form {
@@ -36,24 +61,38 @@
 
 .search-form input {
   flex: 1;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px 0 0 4px;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px 0 0 6px;
   font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: inset 0 1px 3px rgba(74,144,226,0.2);
 }
 
 .search-form button {
-  padding: 0.8rem 1.5rem;
-  background-color: #4a90e2;
+  padding: 0.9rem 1.8rem;
+  background: linear-gradient(to right, #4a90e2, #5ca9fb);
   color: white;
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 6px 6px 0;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .search-form button:hover {
-  background-color: #357abf;
+  background: linear-gradient(to right, #357abf, #4a90e2);
+  box-shadow: 0 4px 8px rgba(74,144,226,0.3);
+  transform: translateY(-2px);
 }
 
 .category-filter {
@@ -63,9 +102,9 @@
 
 .category-select {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
   font-size: 1rem;
   background-color: white;
   cursor: pointer;
@@ -74,7 +113,8 @@
   background-repeat: no-repeat;
   background-position: right 0.7rem center;
   background-size: 1.2rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .category-select:hover {
@@ -84,22 +124,25 @@
 .category-select:focus {
   outline: none;
   border-color: #4a90e2;
-  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  box-shadow: inset 0 1px 3px rgba(74,144,226,0.2);
 }
 
 .blog-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .loading,
 .no-blogs {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem;
   font-size: 1.2rem;
   color: #666;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .loading {
@@ -109,47 +152,72 @@
   justify-content: center;
 }
 
-.no-blogs button {
+.loading:after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
   margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #4a90e2;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-blogs button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(to right, #4a90e2, #5ca9fb);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .no-blogs button:hover {
-  background-color: #357abf;
+  background: linear-gradient(to right, #357abf, #4a90e2);
+  box-shadow: 0 5px 10px rgba(74,144,226,0.3);
+  transform: translateY(-2px);
 }
 
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
-  gap: 0.5rem;
+  margin-top: 3rem;
+  gap: 0.7rem;
 }
 
 .btn-page {
-  padding: 0.6rem 1rem;
-  border: 1px solid #ddd;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #e1e5eb;
   background-color: white;
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: all 0.3s;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .btn-page.active {
-  background-color: #4a90e2;
+  background: linear-gradient(to right, #4a90e2, #5ca9fb);
   color: white;
-  border-color: #4a90e2;
+  border-color: transparent;
+  box-shadow: 0 3px 8px rgba(74,144,226,0.3);
 }
 
 .btn-page:hover:not(:disabled):not(.active) {
   border-color: #4a90e2;
   color: #4a90e2;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(74,144,226,0.15);
 }
 
 .btn-page:disabled {
@@ -159,13 +227,28 @@
 
 .page-numbers {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 
 /* Media Queries */
+@media (max-width: 992px) {
+  .blog-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .blog-list-header h1 {
+    font-size: 2.4rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .blog-list-container {
+    padding: 1.5rem;
+  }
+  
   .blog-filter-section {
     flex-direction: column;
+    padding: 1.2rem;
   }
   
   .search-form, 
@@ -175,5 +258,29 @@
   
   .blog-list {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .blog-list-header h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-list-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-list-container {
+    padding: 1rem;
+  }
+  
+  .blog-filter-section {
+    padding: 1rem;
+  }
+  
+  .btn-page {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
   }
 } 

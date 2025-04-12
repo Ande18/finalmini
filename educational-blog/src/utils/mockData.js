@@ -335,6 +335,132 @@ export const blogs = [
     ],
     createdAt: '2023-05-28T12:00:00.000Z',
     updatedAt: '2023-05-30T14:15:00.000Z'
+  },
+  {
+    _id: '119',
+    title: 'Modern JavaScript Frameworks: A Comprehensive Comparison',
+    content: '<p>The world of JavaScript frameworks evolves rapidly. This article compares the most popular ones to help you choose.</p><h2>React</h2><p>Developed by Facebook, React is a library for building user interfaces with a component-based architecture.</p><h2>Angular</h2><p>Google\'s Angular provides a comprehensive solution with built-in tools for routing, forms, and HTTP requests.</p><h2>Vue.js</h2><p>Vue combines the best aspects of React and Angular with a gentler learning curve.</p>',
+    summary: 'An in-depth comparison of React, Angular, Vue.js, and other modern JavaScript frameworks',
+    author: '1',
+    category: 'Web Development',
+    tags: ['JavaScript', 'Frontend', 'Web Development', 'Frameworks'],
+    coverImage: 'https://source.unsplash.com/random/800x600/?javascript',
+    likes: ['2'],
+    comments: [
+      {
+        _id: '230',
+        user: '2',
+        text: 'Great breakdown of the differences! This helped me decide which framework to learn first.',
+        createdAt: '2023-06-05T10:45:00.000Z'
+      }
+    ],
+    createdAt: '2023-06-01T09:30:00.000Z',
+    updatedAt: '2023-06-05T10:45:00.000Z'
+  },
+  {
+    _id: '120',
+    title: 'Introduction to Data Science with Python',
+    content: '<p>Python has become the leading language for data science due to its readability and powerful libraries.</p><h2>Essential Libraries</h2><p>NumPy, Pandas, and Matplotlib form the foundation of Python\'s data science ecosystem.</p><h2>Data Manipulation</h2><p>Pandas provides powerful tools for data cleaning, transformation, and analysis.</p><h2>Visualization</h2><p>Tools like Matplotlib and Seaborn help turn complex data into meaningful visuals.</p>',
+    summary: 'Learn the fundamentals of data analysis, manipulation and visualization using Python',
+    author: '3',
+    category: 'Data Science',
+    tags: ['Python', 'Data Science', 'Programming', 'Analytics'],
+    coverImage: 'https://source.unsplash.com/random/800x600/?python',
+    likes: ['1', '2'],
+    comments: [
+      {
+        _id: '231',
+        user: '1',
+        text: 'This was exactly what I needed to start my data science journey!',
+        createdAt: '2023-06-12T15:20:00.000Z'
+      }
+    ],
+    createdAt: '2023-06-08T11:15:00.000Z',
+    updatedAt: '2023-06-12T15:20:00.000Z'
+  },
+  {
+    _id: '121',
+    title: 'The Power of Critical Thinking in Education',
+    content: '<p>Critical thinking is essential for success in both academia and professional life.</p><h2>What is Critical Thinking?</h2><p>Critical thinking involves analyzing information objectively to form reasoned judgments.</p><h2>Teaching Strategies</h2><p>Effective methods for developing students\' critical thinking skills in various subjects.</p><h2>Real-world Applications</h2><p>How critical thinking translates to better decision-making in everyday situations.</p>',
+    summary: 'Exploring why critical thinking skills are vital and how to develop them effectively',
+    author: '2',
+    category: 'Education',
+    tags: ['Education', 'Critical Thinking', 'Learning', 'Teaching'],
+    coverImage: 'https://source.unsplash.com/random/800x600/?thinking',
+    likes: ['1', '3'],
+    comments: [
+      {
+        _id: '232',
+        user: '3',
+        text: 'As an educator, I found these strategies particularly helpful.',
+        createdAt: '2023-06-18T09:35:00.000Z'
+      }
+    ],
+    createdAt: '2023-06-15T13:40:00.000Z',
+    updatedAt: '2023-06-18T09:35:00.000Z'
+  },
+  {
+    _id: '122',
+    title: 'Blockchain Technology and Its Educational Applications',
+    content: '<p>Blockchain technology extends far beyond cryptocurrencies and has promising applications in education.</p><h2>Credential Verification</h2><p>How blockchain can revolutionize the verification of academic credentials and certificates.</p><h2>Intellectual Property</h2><p>Protecting educational content and research through immutable blockchain records.</p><h2>Decentralized Learning</h2><p>The potential for truly peer-to-peer educational platforms without central authorities.</p>',
+    summary: 'Discover how blockchain technology is transforming educational systems and processes',
+    author: '1',
+    category: 'Technology',
+    tags: ['Blockchain', 'EdTech', 'Innovation', 'Technology'],
+    coverImage: 'https://source.unsplash.com/random/800x600/?blockchain',
+    likes: ['3'],
+    comments: [
+      {
+        _id: '233',
+        user: '2',
+        text: 'I never considered these applications for blockchain before. Very insightful!',
+        createdAt: '2023-06-25T16:50:00.000Z'
+      }
+    ],
+    createdAt: '2023-06-22T10:20:00.000Z',
+    updatedAt: '2023-06-25T16:50:00.000Z'
+  },
+  {
+    _id: '123',
+    title: 'Climate Change: The Science and Solutions',
+    content: '<p>Understanding the science behind climate change is crucial for developing effective solutions.</p><h2>The Greenhouse Effect</h2><p>How greenhouse gases trap heat in Earth\'s atmosphere and contribute to global warming.</p><h2>Impact Assessment</h2><p>Current and projected effects of climate change on ecosystems and human societies.</p><h2>Mitigation Strategies</h2><p>Technologies and policies that can help reduce greenhouse gas emissions and slow climate change.</p>',
+    summary: 'An evidence-based overview of climate change causes, effects, and potential solutions',
+    author: '3',
+    category: 'Environmental Science',
+    tags: ['Climate Change', 'Environment', 'Science', 'Sustainability'],
+    coverImage: 'https://source.unsplash.com/random/800x600/?climate',
+    likes: ['1', '2'],
+    comments: [
+      {
+        _id: '234',
+        user: '1',
+        text: 'This presentation of the facts is clear and compelling. Well done!',
+        createdAt: '2023-07-05T11:15:00.000Z'
+      }
+    ],
+    createdAt: '2023-07-01T14:30:00.000Z',
+    updatedAt: '2023-07-05T11:15:00.000Z'
+  },
+  {
+    _id: '124',
+    title: 'The Art and Science of Photography',
+    content: '<p>Photography sits at the intersection of technical skill and artistic vision.</p><h2>Understanding Light</h2><p>How different lighting conditions affect your images and techniques for working with various light sources.</p><h2>Composition Principles</h2><p>Rules and guidelines that help create visually compelling photographs.</p><h2>Technical Aspects</h2><p>Understanding aperture, shutter speed, ISO, and how they work together to create an exposure.</p>',
+    summary: 'Learn the fundamental principles of photography that blend technical knowledge with creative expression',
+    author: '2',
+    category: 'Photography',
+    tags: ['Photography', 'Art', 'Creativity', 'Technical Skills'],
+    coverImage: 'https://source.unsplash.com/random/800x600/?camera',
+    likes: ['1'],
+    comments: [
+      {
+        _id: '235',
+        user: '3',
+        text: 'Your explanation of composition principles really improved my photography!',
+        createdAt: '2023-07-12T09:40:00.000Z'
+      }
+    ],
+    createdAt: '2023-07-08T15:25:00.000Z',
+    updatedAt: '2023-07-12T09:40:00.000Z'
   }
 ];
 
