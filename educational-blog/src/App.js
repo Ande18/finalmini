@@ -55,6 +55,7 @@ function App() {
         <DatabaseStatus />
         <Routes>
           <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Landing />} />
+          <Route path="/home" element={<Landing />} />
           <Route path="/register" element={<Register setAuth={setAuth} />} />
           <Route path="/login" element={<Login setAuth={setAuth} />} />
           <Route path="/blogs" element={<BlogList />} />

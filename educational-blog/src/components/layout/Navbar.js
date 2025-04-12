@@ -31,7 +31,7 @@ const Navbar = ({ user, clearAuth }) => {
   const authLinks = (
     <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
       <motion.li custom={0} variants={navItemVariants} initial="hidden" animate="visible">
-        <Link to="/" onClick={() => setIsOpen(false)}>
+        <Link to="/home" onClick={() => setIsOpen(false)}>
           <FaHome className="nav-icon" /> Home
         </Link>
       </motion.li>
@@ -81,7 +81,7 @@ const Navbar = ({ user, clearAuth }) => {
   const guestLinks = (
     <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
       <motion.li custom={0} variants={navItemVariants} initial="hidden" animate="visible">
-        <Link to="/" onClick={() => setIsOpen(false)}>
+        <Link to="/home" onClick={() => setIsOpen(false)}>
           <FaHome className="nav-icon" /> Home
         </Link>
       </motion.li>
@@ -131,7 +131,7 @@ const Navbar = ({ user, clearAuth }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <Link to="/" className="logo" onClick={() => setIsOpen(false)}>
+          <Link to="/home" className="logo" onClick={() => setIsOpen(false)}>
             <motion.h1
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
